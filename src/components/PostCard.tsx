@@ -18,8 +18,6 @@ type Post = Posts[number];
 
 function PostCard({ post, dbUserId,isOwnProfile }: { post: Post; dbUserId?: string | null,isOwnProfile?:boolean }) {
   const { user } = useUser();
-  console.log('dbUserId', dbUserId);
-  console.log('user',user)
   const [newComment, setNewComment] = useState("");
   const [isCommenting, setIsCommenting] = useState(false);
   const [isLiking, setIsLiking] = useState(false);
