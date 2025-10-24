@@ -203,7 +203,7 @@ function ProfilePageClient({
           <TabsContent value="posts" className="mt-6">
             <div className="space-y-6">
               {posts.length > 0 ? (
-                posts.map((post) => <PostCard key={post.id} post={post} dbUserId={user.id} />)
+                posts.map((post) => <PostCard key={post.id} post={post} dbUserId={user.id} isOwnProfile={isOwnProfile}/>)
               ) : (
                 <div className="text-center py-8 text-muted-foreground">No posts yet</div>
               )}
